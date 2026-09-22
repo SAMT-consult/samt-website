@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
+import Cta from '../components/Cta.astro';
+import { site, tr, paras } from '../lib/data.js';
+const { lang } = Astro.props;
+const a = site.about || {};
+---
+<Base lang={lang} title={tr(a, 'title', lang)} path="/about/" current="about">
+  <section class="pad page-top">
+    <h1 class="mega">{tr(a, 'title', lang)}</h1>
+    <div class="statement" style="margin-top:clamp(48px,7vw,96px)"><span></span><p class="lg">{tr(a, 'intro', lang)}</p></div>
+  </section>
+  {tr(a, 'name_text', lang) && <section class="pad" style="padding-top:0"><div class="statement"><p class="label">{tr(a, 'name_label', lang)}</p><p class="lg" style="color:var(--soft)">{tr(a, 'name_text', lang)}</p></div></section>}
+  {(a.principles || []).length > 0 && <section class="pad" style="padding-top:0">
+    <div class="statement"><p class="label">{tr(a, 'principles_label', lang)}</p><span></span></div>
+    <div class="cols3">{a.principles.map((i) => <div><h3>{tr(i, 'title', lang)}</h3><p>{tr(i, 'text', lang)}</p></div>)}</div>
+  </section>}
+  <section class="pad" style="padding-top:0">
+    <div class="statement"><p class="label">{tr(a, 'leadership_label', lang)}</p><span></span></div>
+    <div class="person">
+      <Pic src={a.portrait} alt={tr(a, 'person', lang)} widths={[400, 800]} sizes="(max-width:860px) 320px, 460px" />
+      <div><h2 class="xl">{tr(a, 'person', lang)}</h2><p class="role">{tr(a, 'role', lang)}</p>
+        {paras(tr(a, 'bio', lang)).map((x) => <p class="body">{x}</p>)}</div>
+    </div>
+  </section>
+  <Cta lang={lang} />
+</Base>

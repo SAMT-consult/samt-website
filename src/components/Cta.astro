@@ -1,0 +1,8 @@
+---
+import { site, tr, href } from '../lib/data.js';
+const { lang } = Astro.props;
+---
+<a class="cta pad" href={href(lang, '/contact/')}>
+  <span class="small">{tr(site.cta, 'small', lang)}</span>
+  <span class="mega" style="display:block">{tr(site.cta, 'big', lang)}</span>
+</a>

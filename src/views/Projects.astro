@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
+import { getImage } from 'astro:assets';
+import { site, tr, href, num, img, getProjects } from '../lib/data.js';
+import { ui } from '../lib/ui.js';
+const { lang } = Astro.props;
+const t = ui[lang];
+const pp = site.projects_page || {};
+const sep = lang === 'ar' ? '، ' : ', ';
+const projects = await Promise.all(getProjects().map(async (p) => {
+  const m = img(p.cover);
+  const pv = m ? await getImage({ src: m, width: Math.min(800, m.width), format: 'webp', quality: 72 }) : null;
+  return { ...p, preview: pv?.src ?? '' };
+}));
+const cats = ['all', ...Object.keys(t.cats).filter((c) => projects.some((p) => p.category === c))];
+---
+<Base lang={lang} title={tr(pp, 'title', lang)} path="/projects/" current="projects">
+  <section class="pad page-top">
+    <h1 class="mega">{tr(pp, 'title', lang)}</h1>
+    {tr(pp, 'note', lang) && <p class="note">{tr(pp, 'note', lang)}</p>}
+    <div class="toolbar">
+      <div class="filters" role="group">{cats.map((c, i) => <button type="button" data-cat={c} aria-pressed={i === 0 ? 'true' : 'false'}>{c === 'all' ? t.all : t.cats[c]}</button>)}</div>
+      <div class="views" role="group"><button type="button" data-view="index" aria-pressed="true">{t.index}</button><button type="button" data-view="grid" aria-pressed="false">{t.grid}</button></div>
+    </div>
+    <div id="v-index" class="index">
+      {projects.map((p) => (
+        <a class="ix" href={href(lang, `/projects/${p.slug}/`)} data-cat={p.category} data-preview={p.preview}>
+          <span class="n">{tr(p, 'title', lang)}</span><span class="m c">{t.cats[p.category] ?? ''}</span>
+          <span class="m">{tr(p, 'location', lang)}</span><span class="y">{num(p.year, lang)}</span>
+        </a>
+      ))}
+    </div>
+    <div id="v-grid" class="grid" hidden>
+      {projects.map((p) => (
+        <a class="tile" href={href(lang, `/projects/${p.slug}/`)} data-cat={p.category}>
+          <div class="ph"><Pic src={p.cover} alt={tr(p, 'title', lang)} widths={[480, 800, 1200]} sizes="(max-width:560px) 100vw, (max-width:980px) 50vw, 33vw" /></div>
+          <h3>{tr(p, 'title', lang)}</h3><p>{tr(p, 'location', lang)}{sep}{num(p.year, lang)}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+  <div class="preview" id="pv" aria-hidden="true"><img alt="" /></div>
+</Base>
+
+<script>
+  const vIndex = document.getElementById('v-index');
+  const vGrid = document.getElementById('v-grid');
+  const pv = document.getElementById('pv');
+  const pvImg = pv?.querySelector('img');
+  const rtl = document.documentElement.dir === 'rtl';
+  let view = 'index';
+  try { if (localStorage.getItem('samt-view') === 'grid') view = 'grid'; } catch (e) {}
+
+  function setView(v) {
+    view = v;
+    vIndex.hidden = v !== 'index';
+    vGrid.hidden = v !== 'grid';
+    document.querySelectorAll('[data-view]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    try { localStorage.setItem('samt-view', v); } catch (e) {}
+  }
+  document.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
+  document.querySelectorAll('[data-cat]').forEach((b) => {
+    if (b.tagName !== 'BUTTON') return;
+    b.addEventListener('click', () => {
+      const c = b.dataset.cat;
+      document.querySelectorAll('.filters button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      document.querySelectorAll('.ix, .tile').forEach((el) => { el.hidden = !(c === 'all' || el.dataset.cat === c); });
+    });
+  });
+  document.querySelectorAll('.ix').forEach((r) => {
+    r.addEventListener('mouseenter', () => { if (r.dataset.preview) { pvImg.src = r.dataset.preview; pv.classList.add('on'); } });
+    r.addEventListener('mouseleave', () => pv.classList.remove('on'));
+    r.addEventListener('mousemove', (e) => {
+      const w = 340, h = 255;
+      const x = rtl ? Math.max(16, e.clientX - w - 28) : Math.min(e.clientX + 28, innerWidth - w - 16);
+      pv.style.left = x + 'px';
+      pv.style.top = Math.min(Math.max(e.clientY - h / 2, 90), innerHeight - h - 16) + 'px';
+    });
+  });
+  setView(view);
+</script>

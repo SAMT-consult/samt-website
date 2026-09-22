@@ -1,0 +1,33 @@
+// Small interface labels. Main content lives in src/content and is edited in the CMS.
+export const ui = {
+  en: {
+    skip: 'Skip to content', menu: 'Menu', switch: 'العربية',
+    all: 'All', index: 'Index', grid: 'Grid',
+    cats: { workplace: 'Workplace', residential: 'Residential', hospitality: 'Hospitality', civic: 'Civic and mixed-use' },
+    back: 'All projects', location: 'Location', year: 'Year', size: 'Size', scope: 'Our role',
+    prev: 'Previous', next: 'Next',
+    name: 'Name', company: 'Company', email: 'Email', phone: 'Phone (optional)', type: 'What do you need?', message: 'About the project',
+    types: ['Design packages', 'Project management', 'Design review', 'Something else'],
+    eName: 'Enter your name.', eEmail: 'Enter an email address we can reply to.', eMsg: 'Tell us a little about the project.',
+    send: 'Send message', sending: 'Sending…', sent: 'Thank you. Your message has been sent and we will reply shortly.',
+    failed: 'The message could not be sent. Please email us directly.',
+    prepare: 'Prepare email', ready: 'Your message is ready. Open it in your email app and press send.', open: 'Open in email app',
+    tel: 'Phone', wa: 'WhatsApp', waText: 'Message us on WhatsApp', direct: 'Direct', linkedin: 'LinkedIn', base: 'Based in',
+    nf: 'That page does not exist.', home: 'Go to the home page',
+  },
+  ar: {
+    skip: 'الانتقال إلى المحتوى', menu: 'القائمة', switch: 'English',
+    all: 'الكل', index: 'قائمة', grid: 'معرض',
+    cats: { workplace: 'مكاتب', residential: 'سكني', hospitality: 'ضيافة', civic: 'مدني ومتعدد الاستخدامات' },
+    back: 'جميع المشاريع', location: 'الموقع', year: 'السنة', size: 'المساحة', scope: 'نطاق العمل',
+    prev: 'المشروع السابق', next: 'المشروع التالي',
+    name: 'الاسم', company: 'الجهة', email: 'البريد الإلكتروني', phone: 'رقم الجوال (اختياري)', type: 'الخدمة المطلوبة', message: 'تفاصيل المشروع',
+    types: ['إعداد مخططات التصميم', 'إدارة المشروع', 'التدقيق الفني', 'أخرى'],
+    eName: 'يُرجى إدخال الاسم.', eEmail: 'يُرجى إدخال بريد إلكتروني صحيح للتواصل.', eMsg: 'يُرجى إضافة نبذة عن المشروع.',
+    send: 'إرسال الرسالة', sending: 'جارٍ الإرسال…', sent: 'شكراً لكم. وصلتنا رسالتكم وسنتواصل معكم قريباً.',
+    failed: 'تعذّر إرسال الرسالة. يُرجى مراسلتنا مباشرة عبر البريد الإلكتروني.',
+    prepare: 'إعداد الرسالة', ready: 'رسالتكم جاهزة. افتحوها في تطبيق البريد ثم أرسلوها.', open: 'فتح في تطبيق البريد',
+    tel: 'الهاتف', wa: 'واتساب', waText: 'راسلونا عبر واتساب', direct: 'البريد المباشر', linkedin: 'لينكدإن', base: 'المقر',
+    nf: 'الصفحة المطلوبة غير موجودة.', home: 'العودة إلى الصفحة الرئيسية',
+  },
+};

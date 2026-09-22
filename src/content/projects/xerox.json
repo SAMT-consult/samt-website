@@ -1,0 +1,19 @@
+{
+  "title_en": "Xerox Head Office",
+  "title_ar": "المقر الرئيسي لزيروكس السعودية",
+  "published": true,
+  "featured": false,
+  "order": 4,
+  "category": "workplace",
+  "location_en": "Riyadh, Saudi Arabia",
+  "location_ar": "الرياض، السعودية",
+  "year": 2025,
+  "size_en": "750 m²",
+  "size_ar": "٧٥٠ م²",
+  "scope_en": "Interior design, project management",
+  "scope_ar": "التصميم الداخلي وإدارة المشروع",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/xerox-1.jpg",
+  "gallery": []
+}

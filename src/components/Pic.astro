@@ -1,0 +1,10 @@
+---
+// Optimised image: resized, converted to WebP, served with srcset.
+import { Image } from 'astro:assets';
+import { img } from '../lib/data.js';
+const { src, alt = '', widths = [640, 1024, 1600, 2400], sizes = '100vw', class: cls, loading = 'lazy', fetchpriority } = Astro.props;
+const meta = img(src);
+const w = meta ? widths.filter((x) => x <= meta.width) : [];
+if (meta && !w.length) w.push(meta.width);
+---
+{meta && <Image src={meta} alt={alt} widths={w} sizes={sizes} format="webp" quality={78} class={cls} loading={loading} fetchpriority={fetchpriority} />}

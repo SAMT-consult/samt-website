@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Cta from '../components/Cta.astro';
+import { site, tr } from '../lib/data.js';
+const { lang } = Astro.props;
+const s = site.services || {};
+const e = site.engagement || {};
+---
+<Base lang={lang} title={tr(s, 'title', lang)} path="/services/" current="services">
+  <section class="pad page-top">
+    <h1 class="mega">{tr(s, 'title', lang)}</h1>
+    <div class="statement" style="margin-top:clamp(48px,7vw,96px)"><span></span><p class="lg" style="color:var(--soft)">{tr(s, 'intro', lang)}</p></div>
+    <div class="rows">{(s.items || []).map((i) => <div class="row"><h3>{tr(i, 'title', lang)}</h3><p>{tr(i, 'text', lang)}</p></div>)}</div>
+  </section>
+  {(s.steps || []).length > 0 && <section class="pad" style="padding-top:0">
+    <div class="statement"><p class="label">{tr(s, 'process_label', lang)}</p><h2 class="xl">{tr(s, 'process_title', lang)}</h2></div>
+    <div class="steps">{s.steps.map((i) => <div class="step"><h3>{tr(i, 'title', lang)}</h3><p>{tr(i, 'text', lang)}</p></div>)}</div>
+  </section>}
+  <section class="pad" style="padding-top:0">
+    <div class="statement"><p class="label">{tr(e, 'label', lang)}</p><h2 class="xl">{tr(e, 'title', lang)}</h2></div>
+    <div class="rows">{(e.items || []).map((i) => <div class="row"><h3>{tr(i, 'title', lang)}</h3><p>{tr(i, 'text', lang)}</p></div>)}</div>
+  </section>
+  <Cta lang={lang} />
+</Base>

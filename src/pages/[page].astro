@@ -1,0 +1,6 @@
+---
+import V from '../views/Page.astro';
+import { getPages } from '../lib/data.js';
+export function getStaticPaths() { return getPages().map((p) => ({ params: { page: p.slug } })); }
+---
+<V lang="en" slug={Astro.params.page} />

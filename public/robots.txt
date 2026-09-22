@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://samtconsult.com/sitemap-index.xml

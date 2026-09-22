@@ -1,0 +1,212 @@
+{
+  "brand": {
+    "name_en": "SAMT Consult",
+    "name_ar": "سَمْت للاستشارات الهندسية",
+    "description_en": "Engineering design and project management for engineering offices and developers in Saudi Arabia and the Gulf.",
+    "description_ar": "استشارات هندسية وإدارة مشاريع للمكاتب الاستشارية والمطوّرين العقاريين في المملكة العربية السعودية ودول الخليج."
+  },
+  "menu": {
+    "projects_en": "Projects",
+    "projects_ar": "المشاريع",
+    "services_en": "Services",
+    "services_ar": "الخدمات",
+    "about_en": "About",
+    "about_ar": "من نحن",
+    "contact_en": "Contact",
+    "contact_ar": "تواصل معنا"
+  },
+  "home": {
+    "hero_image": "/src/assets/images/alinco-1.jpg",
+    "hero_title_en": "Design you can submit.\nProjects managed to handover.",
+    "hero_title_ar": "نصمّم ما يُعتمَد،\nونُدير ما يُبنى.",
+    "hero_text_en": "Engineering design and project management for engineering offices and developers in Saudi Arabia and the Gulf.",
+    "hero_text_ar": "استشارات هندسية وإدارة مشاريع للمكاتب الاستشارية والمطوّرين العقاريين في المملكة العربية السعودية ودول الخليج.",
+    "statement_label_en": "Practice",
+    "statement_label_ar": "نهجنا",
+    "statement_title_en": "We take the whole package, coordinate it across disciplines, and stay with the project until it is built.",
+    "statement_title_ar": "نتولّى أعمال التصميم كاملةً، وننسّق بين تخصصاتها، ونلازم المشروع حتى يكتمل تنفيذه.",
+    "statement_text_en": "Most delays start with an incomplete drawing set or a missed code check. We work so that what reaches you is complete and ready for authority review. Our team brings over two decades of experience across Saudi Arabia, Syria, Qatar and Iraq.",
+    "statement_text_ar": "تبدأ معظم حالات التأخير في المشاريع من مخططات غير مكتملة أو متطلبات نظامية أُغفلت في مرحلة مبكرة. لذلك نحرص على أن تصلكم الأعمال مكتملةً ومستوفيةً لاشتراطات الجهات المختصة. ويستند فريقنا إلى خبرة تتجاوز عشرين عاماً في المملكة العربية السعودية وسوريا وقطر والعراق.",
+    "featured_label_en": "Selected work",
+    "featured_label_ar": "مشاريع مختارة"
+  },
+  "engagement": {
+    "label_en": "Engagement",
+    "label_ar": "نماذج التعاون",
+    "title_en": "Three ways to work with us",
+    "title_ar": "ثلاثة نماذج للعمل معنا",
+    "items": [
+      {
+        "title_en": "Design partner to engineering offices",
+        "title_ar": "شريك تصميم للمكاتب الاستشارية",
+        "text_en": "We produce the design packages under your supervision. You review, stamp and submit.",
+        "text_ar": "نتولّى إعداد المخططات والمستندات تحت إشرافكم، ثم تراجعونها وتعتمدونها وتقدّمونها باسم مكتبكم."
+      },
+      {
+        "title_en": "Project management for owners and developers",
+        "title_ar": "إدارة المشاريع لصالح المالك",
+        "text_en": "We represent you through design and construction: programme, cost, quality and coordination.",
+        "text_ar": "نمثّلكم طوال مرحلتي التصميم والتنفيذ، فنضبط الجدول الزمني والتكلفة والجودة، وننسّق مع المقاول والمختصين."
+      },
+      {
+        "title_en": "Independent design review",
+        "title_ar": "التدقيق الفني المستقل",
+        "text_en": "We check a drawing package, bill of quantities or tender document before it is issued, with a written report.",
+        "text_ar": "نراجع المخططات أو جداول الكميات أو مستندات الطرح قبل إصدارها، ونرفع إليكم تقريراً مكتوباً بالملاحظات."
+      }
+    ]
+  },
+  "cta": {
+    "small_en": "Have a project in design or on site?",
+    "small_ar": "هل لديكم مشروع قيد التصميم أو التنفيذ؟",
+    "big_en": "Start a conversation",
+    "big_ar": "لنبدأ الحديث"
+  },
+  "projects_page": {
+    "title_en": "Projects",
+    "title_ar": "المشاريع",
+    "note_en": "These projects were delivered by our founder in independent practice, before SAMT Consult was formed.",
+    "note_ar": "أنجز مؤسس الشركة هذه المشاريع بصفته المهنية المستقلة، قبل تأسيس سَمْت."
+  },
+  "services": {
+    "title_en": "Services",
+    "title_ar": "الخدمات",
+    "intro_en": "Design and management under one roof, so the people who drew the project answer for it on site.",
+    "intro_ar": "نجمع التصميم وإدارة المشاريع تحت سقف واحد، فمن صمّم المشروع يبقى مسؤولاً عنه في الموقع.",
+    "items": [
+      {
+        "title_en": "Architectural design",
+        "title_ar": "التصميم المعماري",
+        "text_en": "From concept to full construction packages, coordinated with every discipline.",
+        "text_ar": "من الفكرة الأولية حتى مخططات التنفيذ الكاملة، بالتنسيق مع جميع التخصصات."
+      },
+      {
+        "title_en": "Interior design and fit-out",
+        "title_ar": "التصميم الداخلي والتشطيبات",
+        "text_en": "Workplace, hospitality and residential interiors, detailed for construction and procurement.",
+        "text_ar": "مكاتب ومنشآت ضيافة ومساكن، بتفاصيل جاهزة للتنفيذ والتوريد."
+      },
+      {
+        "title_en": "Studies and cost estimates",
+        "title_ar": "الدراسات وتقدير التكاليف",
+        "text_en": "Cost estimates, specifications, bills of quantities and tender documents.",
+        "text_ar": "تقدير التكاليف، وإعداد المواصفات وجداول الكميات ومستندات الطرح."
+      },
+      {
+        "title_en": "Project management",
+        "title_ar": "إدارة المشاريع",
+        "text_en": "Programme, cost and quality control, with one point of contact for the whole team.",
+        "text_ar": "ضبط الجدول الزمني والتكلفة والجودة، عبر جهة تواصل واحدة للفريق بأكمله."
+      },
+      {
+        "title_en": "Construction supervision",
+        "title_ar": "الإشراف على التنفيذ",
+        "text_en": "Site supervision so that what gets built is what was designed and approved.",
+        "text_ar": "إشراف ميداني يضمن أن يُنفَّذ ما صُمّم واعتُمد."
+      },
+      {
+        "title_en": "Contract and procurement advice",
+        "title_ar": "الاستشارات التعاقدية والمشتريات",
+        "text_en": "Procurement routes, contract forms, and which specialists your project needs and when.",
+        "text_ar": "اختيار أسلوب الطرح وصيغة العقد، وتحديد المختصين الذين يحتاجهم مشروعكم وتوقيت إشراكهم."
+      }
+    ],
+    "process_label_en": "Process",
+    "process_label_ar": "المنهجية",
+    "process_title_en": "How a project runs with us",
+    "process_title_ar": "مراحل العمل",
+    "steps": [
+      {
+        "title_en": "Brief and scope",
+        "title_ar": "تحديد النطاق",
+        "text_en": "We agree in writing what is delivered, by whom, and by when.",
+        "text_ar": "نتفق معكم كتابةً على المخرجات والمسؤوليات والمواعيد."
+      },
+      {
+        "title_en": "Design",
+        "title_ar": "التصميم",
+        "text_en": "Concept, then developed design, reviewed with you at each stage.",
+        "text_ar": "من الفكرة إلى التصميم التفصيلي، مع مراجعة مشتركة في ختام كل مرحلة."
+      },
+      {
+        "title_en": "Coordination",
+        "title_ar": "التنسيق",
+        "text_en": "Disciplines are checked against each other before anything is issued.",
+        "text_ar": "نطابق مخرجات التخصصات فيما بينها قبل إصدار أي مخطط."
+      },
+      {
+        "title_en": "Approval",
+        "title_ar": "الاعتماد",
+        "text_en": "Packages are prepared to authority requirements and tracked through review.",
+        "text_ar": "نُعدّ المخططات وفق اشتراطات الجهات المختصة، ونتابعها حتى صدور الموافقة."
+      },
+      {
+        "title_en": "Construction",
+        "title_ar": "التنفيذ",
+        "text_en": "Supervision, contractor coordination, and monthly reports on programme and cost.",
+        "text_ar": "إشراف ميداني، وتنسيق مع المقاول، وتقارير شهرية عن سير الأعمال والتكلفة."
+      },
+      {
+        "title_en": "Handover",
+        "title_ar": "التسليم",
+        "text_en": "Close-out documents, snag resolution, and a complete project record.",
+        "text_ar": "مستندات الإقفال، ومعالجة الملاحظات، وأرشيف متكامل للمشروع."
+      }
+    ]
+  },
+  "about": {
+    "title_en": "About",
+    "title_ar": "من نحن",
+    "intro_en": "SAMT Consult is an engineering consultancy for design and project management. We work for engineering offices that need reliable design capacity, and for developers and owners who need someone accountable for delivery.",
+    "intro_ar": "سَمْت شركة استشارات هندسية متخصصة في التصميم وإدارة المشاريع. نعمل مع المكاتب الاستشارية التي تحتاج إلى قدرات تصميم موثوقة، ومع المطوّرين والملّاك الذين يبحثون عن جهة تتحمّل مسؤولية التسليم.",
+    "name_label_en": "The name",
+    "name_label_ar": "معنى الاسم",
+    "name_text_en": "Samt is the Arabic word for a bearing — a direction measured, not guessed. The English word azimuth comes from it. It also means composure: a steady way of carrying yourself. Both describe how we work.",
+    "name_text_ar": "السَّمْت في لغة المساحة والفلك زاويةُ الاتجاه: وجهةٌ تُقاس ولا تُقدَّر، ومنه اشتُقّ المصطلح الإنكليزي azimuth. والسَّمْت في اللغة أيضاً حُسنُ الهيئة والوقار. وفي المعنيين وصفٌ لطريقتنا في العمل.",
+    "principles_label_en": "Principles",
+    "principles_label_ar": "مبادئ العمل",
+    "principles": [
+      {
+        "title_en": "Complete",
+        "title_ar": "اكتمال",
+        "text_en": "Packages issued whole: drawings, specifications and quantities coordinated, not partial sets that send work back to you.",
+        "text_ar": "تصدر المخططات والمواصفات والكميات مكتملةً ومنسّقة، فلا تعود إليكم الأعمال لاستكمالها."
+      },
+      {
+        "title_en": "On schedule",
+        "title_ar": "التزام",
+        "text_en": "A programme you can plan around, and one point of contact accountable for the whole team.",
+        "text_ar": "جدول زمني يُعتمد عليه، وجهة واحدة مسؤولة أمامكم عن الفريق بكامل تخصصاته."
+      },
+      {
+        "title_en": "To code",
+        "title_ar": "مطابقة",
+        "text_en": "Saudi Building Code and authority requirements checked before a package is issued, not discovered at review.",
+        "text_ar": "نتحقق من اشتراطات كود البناء السعودي والجهات المختصة قبل الإصدار، لا عند المراجعة."
+      }
+    ],
+    "leadership_label_en": "Leadership",
+    "leadership_label_ar": "القيادة",
+    "person_en": "Ahmad Hamouch, PMP",
+    "person_ar": "أحمد حموش، PMP",
+    "role_en": "Founder and Managing Director",
+    "role_ar": "المؤسس والمدير العام",
+    "portrait": "/src/assets/images/portrait-ahmad-hamouch.jpg",
+    "bio_en": "An architect who graduated from Damascus University in 2005, with twenty years as designer, site engineer, project manager and consultant on educational, commercial, healthcare and government projects.\n\nHe established his own design practice in 2008, worked as project manager and consultant with NGC Group in Erbil, and led a project management division at a Riyadh consultancy.\n\nCertified Project Management Professional (PMP).",
+    "bio_ar": "مهندس معماري تخرّج في جامعة دمشق عام ٢٠٠٥، ويمتد مساره المهني عشرين عاماً بين التصميم والإشراف الميداني وإدارة المشاريع والاستشارات، في مشاريع تعليمية وتجارية وصحية وحكومية.\n\nأسّس مكتبه الخاص للتصميم عام ٢٠٠٨، وعمل مديراً للمشاريع ومستشاراً لدى مجموعة NGC في أربيل، ثم تولّى إدارة قسم المشاريع في مكتب استشاري بالرياض.\n\nحاصل على شهادة محترف إدارة المشاريع (PMP)."
+  },
+  "contact": {
+    "label_en": "Contact",
+    "label_ar": "تواصل معنا",
+    "intro_en": "Tell us about the project, the stage it is at, and any deadline you are working to.",
+    "intro_ar": "حدّثونا عن مشروعكم ومرحلته الحالية، وأي مواعيد مرتبطة به.",
+    "email": "info@samtconsult.com",
+    "email_direct": "a.hamouch@samtconsult.com",
+    "phone": "+963 957 530 828",
+    "whatsapp": "963957530828",
+    "linkedin": "https://www.linkedin.com/company/samt-consult",
+    "base_en": "Damascus, Syria. Working across Saudi Arabia and the Gulf.",
+    "base_ar": "دمشق، سوريا، ونخدم عملاءنا في المملكة العربية السعودية ودول الخليج.",
+    "form_key": ""
+  }
+}

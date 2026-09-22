@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
+import Cta from '../components/Cta.astro';
+import { site, tr, href, num, paras, getProjects } from '../lib/data.js';
+import { ui } from '../lib/ui.js';
+const { lang, slug } = Astro.props;
+const t = ui[lang];
+const all = getProjects();
+const i = all.findIndex((p) => p.slug === slug);
+const p = all[i];
+const prev = all[(i - 1 + all.length) % all.length];
+const next = all[(i + 1) % all.length];
+const name = tr(p, 'title', lang);
+const note = tr(site.projects_page, 'note', lang);
+---
+<Base lang={lang} title={name} path={`/projects/${slug}/`} current="projects" overImage ogImage={p.cover}>
+  <div class="dhero">
+    <Pic src={p.cover} alt={name} loading="eager" fetchpriority="high" />
+    <div class="copy pad"><a class="back" href={href(lang, '/projects/')}>{t.back}</a><h1 class="mega">{name}</h1></div>
+  </div>
+  <div class="pad">
+    <dl class="facts">
+      <div><dt>{t.location}</dt><dd>{tr(p, 'location', lang)}</dd></div>
+      <div><dt>{t.year}</dt><dd>{num(p.year, lang)}</dd></div>
+      <div><dt>{t.size}</dt><dd>{tr(p, 'size', lang)}</dd></div>
+      <div><dt>{t.scope}</dt><dd>{tr(p, 'scope', lang)}</dd></div>
+    </dl>
+    {tr(p, 'description', lang) && <div class="statement" style="padding-block:56px"><span></span><div>{paras(tr(p, 'description', lang)).map((x) => <p class="body" style="margin-bottom:16px">{x}</p>)}</div></div>}
+    {p.gallery.length > 0 && <div class="gallery">{p.gallery.map((g) => <Pic src={g} alt={name} widths={[640, 1024, 1600]} sizes="(max-width:600px) 100vw, 50vw" />)}</div>}
+    {note && <p class="note" style="margin-top:40px">{note}</p>}
+    {all.length > 1 && <div class="pager">
+      <a href={href(lang, `/projects/${prev.slug}/`)}><span class="small">{t.prev}</span><span class="lg">{tr(prev, 'title', lang)}</span></a>
+      <a href={href(lang, `/projects/${next.slug}/`)}><span class="small">{t.next}</span><span class="lg">{tr(next, 'title', lang)}</span></a>
+    </div>}
+  </div>
+  <Cta lang={lang} />
+</Base>

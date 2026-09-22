@@ -1,0 +1,19 @@
+{
+  "title_en": "Student Hotel",
+  "title_ar": "سكن طلابي",
+  "published": true,
+  "featured": false,
+  "order": 14,
+  "category": "hospitality",
+  "location_en": "Syria",
+  "location_ar": "سوريا",
+  "year": 2011,
+  "size_en": "4,000 m² gross",
+  "size_ar": "مساحة البناء ٤٬٠٠٠ م²",
+  "scope_en": "Architectural design",
+  "scope_ar": "التصميم المعماري",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/student-hotel-1.jpg",
+  "gallery": []
+}

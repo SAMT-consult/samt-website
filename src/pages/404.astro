@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { ui } from '../lib/ui.js';
+const t = ui.en, a = ui.ar;
+---
+<Base lang="en" title="404">
+  <section class="pad page-top">
+    <h1 class="mega">{t.nf}</h1>
+    <p style="margin-top:32px"><a href="/" style="border-bottom:1px solid">{t.home}</a></p>
+    <p style="margin-top:48px" dir="rtl" lang="ar">{a.nf} <a href="/ar/" style="border-bottom:1px solid">{a.home}</a></p>
+  </section>
+</Base>

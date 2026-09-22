@@ -1,0 +1,19 @@
+{
+  "title_en": "Al-Nabek Downtown",
+  "title_ar": "وسط مدينة النبك",
+  "published": true,
+  "featured": false,
+  "order": 17,
+  "category": "civic",
+  "location_en": "Al-Nabek, Syria",
+  "location_ar": "النبك، سوريا",
+  "year": 2017,
+  "size_en": "44,000 m² gross",
+  "size_ar": "مساحة البناء ٤٤٬٠٠٠ م²",
+  "scope_en": "Architectural design, mixed-use masterplan",
+  "scope_ar": "التصميم المعماري لمشروع متعدد الاستخدامات",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/alnabek-downtown-1.jpg",
+  "gallery": []
+}

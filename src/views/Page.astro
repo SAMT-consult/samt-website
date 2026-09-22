@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
+import Cta from '../components/Cta.astro';
+import { tr, getPages } from '../lib/data.js';
+const { lang, slug } = Astro.props;
+const p = getPages().find((x) => x.slug === slug);
+const title = tr(p, 'title', lang);
+---
+<Base lang={lang} title={title} path={`/${slug}/`} current={slug} overImage={!!p.cover} ogImage={p.cover}>
+  {p.cover ? (
+    <div class="dhero"><Pic src={p.cover} alt="" loading="eager" fetchpriority="high" /><div class="copy pad"><h1 class="mega">{title}</h1></div></div>
+  ) : (
+    <section class="pad page-top" style="padding-bottom:0"><h1 class="mega">{title}</h1></section>
+  )}
+  <section class="pad">
+    {tr(p, 'intro', lang) && <div class="statement" style="margin-bottom:56px"><span></span><p class="lg">{tr(p, 'intro', lang)}</p></div>}
+    <div class="statement"><span></span><div class="rich" set:html={tr(p, 'body', lang)} /></div>
+    {p.gallery.length > 0 && <div class="gallery" style="margin-top:56px">{p.gallery.map((g) => <Pic src={g} alt={title} widths={[640, 1024, 1600]} sizes="(max-width:600px) 100vw, 50vw" />)}</div>}
+  </section>
+  <Cta lang={lang} />
+</Base>

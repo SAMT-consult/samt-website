@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, tr } from '../lib/data.js';
+import { ui } from '../lib/ui.js';
+const { lang } = Astro.props;
+const t = ui[lang];
+const c = site.contact || {};
+---
+<Base lang={lang} title={tr(c, 'label', lang)} path="/contact/" current="contact">
+  <section class="pad page-top">
+    <p class="label" style="margin-bottom:28px">{tr(c, 'label', lang)}</p>
+    <a class="mail ltr" href={`mailto:${c.email}`}>{c.email}</a>
+    <p class="body" style="margin-top:36px">{tr(c, 'intro', lang)}</p>
+    <div class="cgrid">
+      <form id="cf" novalidate data-key={c.form_key || ''} data-to={c.email}
+        data-sending={t.sending} data-sent={t.sent} data-failed={t.failed} data-send={c.form_key ? t.send : t.prepare}>
+        <div class="two">
+          <div class="f" id="f-name"><label for="name">{t.name}</label><input id="name" name="name" autocomplete="name" /><div class="err">{t.eName}</div></div>
+          <div class="f"><label for="company">{t.company}</label><input id="company" name="company" autocomplete="organization" /></div>
+        </div>
+        <div class="two">
+          <div class="f" id="f-email"><label for="email">{t.email}</label><input id="email" name="email" type="email" class="ltr" autocomplete="email" /><div class="err">{t.eEmail}</div></div>
+          <div class="f"><label for="phone">{t.phone}</label><input id="phone" name="phone" type="tel" class="ltr" autocomplete="tel" /></div>
+        </div>
+        <div class="f"><label for="type">{t.type}</label><select id="type" name="service">{t.types.map((o) => <option>{o}</option>)}</select></div>
+        <div class="f" id="f-msg"><label for="msg">{t.message}</label><textarea id="msg" name="message"></textarea><div class="err">{t.eMsg}</div></div>
+        <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+        <button class="send" type="submit">{c.form_key ? t.send : t.prepare}</button>
+        <p class="status" id="status" role="status"></p>
+        <div class="sent" id="mailbox"><p class="body">{t.ready}</p><a class="send" id="mailgo" href="#" target="_blank" rel="noopener">{t.open}</a></div>
+      </form>
+      <dl class="direct">
+        {c.phone && <div><dt>{t.tel}</dt><dd><a class="ltr" href={`tel:${c.phone.replace(/\s/g, '')}`}>{c.phone}</a></dd></div>}
+        {c.whatsapp && <div><dt>{t.wa}</dt><dd><a href={`https://wa.me/${c.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener">{t.waText}</a></dd></div>}
+        {c.email_direct && <div><dt>{t.direct}</dt><dd><a class="ltr" href={`mailto:${c.email_direct}`}>{c.email_direct}</a></dd></div>}
+        {c.linkedin && <div><dt>{t.linkedin}</dt><dd><a class="ltr" href={c.linkedin} target="_blank" rel="noopener">{c.linkedin.replace(/^https?:\/\/(www\.)?/, '')}</a></dd></div>}
+        {tr(c, 'base', lang) && <div><dt>{t.base}</dt><dd>{tr(c, 'base', lang)}</dd></div>}
+      </dl>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const f = document.getElementById('cf');
+  f?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const v = (n) => (f.elements.namedItem(n)?.value || '').trim();
+    const checks = [['f-name', v('name').length > 0], ['f-email', /^\S+@\S+\.\S+$/.test(v('email'))], ['f-msg', v('message').length > 0]];
+    let ok = true;
+    checks.forEach(([id, good]) => { document.getElementById(id).classList.toggle('bad', !good); if (!good) ok = false; });
+    if (!ok) { f.querySelector('.f.bad input, .f.bad textarea')?.focus(); return; }
+    if (f.elements.namedItem('botcheck').checked) return;
+    const status = document.getElementById('status');
+    const btn = f.querySelector('button[type=submit]');
+    const subject = `${v('service')} — ${v('company') || v('name')}`;
+    if (f.dataset.key) {
+      btn.disabled = true; btn.textContent = f.dataset.sending;
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ access_key: f.dataset.key, subject, from_name: 'samtconsult.com',
+            name: v('name'), email: v('email'), company: v('company'), phone: v('phone'), service: v('service'), message: v('message') }),
+        });
+        const data = await res.json();
+        if (!data.success) throw new Error();
+        status.textContent = f.dataset.sent; f.reset();
+      } catch (err) { status.textContent = f.dataset.failed; }
+      btn.disabled = false; btn.textContent = f.dataset.send;
+    } else {
+      const body = ['name', 'company', 'email', 'phone', 'service'].map((k) => `${k}: ${v(k)}`).join('\n') + '\n\n' + v('message');
+      document.getElementById('mailgo').href = `mailto:${f.dataset.to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      document.getElementById('mailbox').classList.add('show');
+    }
+  });
+</script>

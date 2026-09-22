@@ -1,0 +1,19 @@
+{
+  "title_en": "Apartment 815",
+  "title_ar": "مبنى الشقق ٨١٥",
+  "published": true,
+  "featured": false,
+  "order": 6,
+  "category": "residential",
+  "location_en": "Riyadh, Saudi Arabia",
+  "location_ar": "الرياض، السعودية",
+  "year": 2026,
+  "size_en": "800 m² plot",
+  "size_ar": "مساحة الأرض ٨٠٠ م²",
+  "scope_en": "Exterior design",
+  "scope_ar": "تصميم الواجهات",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/apartment-815-1.jpg",
+  "gallery": []
+}

@@ -1,0 +1,19 @@
+{
+  "title_en": "Apartment 902",
+  "title_ar": "مبنى الشقق ٩٠٢",
+  "published": true,
+  "featured": false,
+  "order": 9,
+  "category": "residential",
+  "location_en": "Doha, Qatar",
+  "location_ar": "الدوحة، قطر",
+  "year": 2011,
+  "size_en": "5,500 m² gross",
+  "size_ar": "مساحة البناء ٥٬٥٠٠ م²",
+  "scope_en": "Architectural design",
+  "scope_ar": "التصميم المعماري",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/apartment-902-1.jpg",
+  "gallery": []
+}

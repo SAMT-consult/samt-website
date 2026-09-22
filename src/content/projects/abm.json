@@ -1,0 +1,19 @@
+{
+  "title_en": "ABM Offices",
+  "title_ar": "مكاتب ABM",
+  "published": true,
+  "featured": false,
+  "order": 5,
+  "category": "workplace",
+  "location_en": "Riyadh, Saudi Arabia",
+  "location_ar": "الرياض، السعودية",
+  "year": 2023,
+  "size_en": "1,200 m²",
+  "size_ar": "١٬٢٠٠ م²",
+  "scope_en": "Interior design, project management",
+  "scope_ar": "التصميم الداخلي وإدارة المشروع",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/abm-1.jpg",
+  "gallery": []
+}

@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
+import Cta from '../components/Cta.astro';
+import { site, tr, href, num, lines, getProjects } from '../lib/data.js';
+const { lang } = Astro.props;
+const h = site.home || {};
+const e = site.engagement || {};
+const featured = getProjects().filter((p) => p.featured).slice(0, 6);
+---
+<Base lang={lang} path="/" overImage>
+  <div class="hero">
+    <Pic src={h.hero_image} alt="" loading="eager" fetchpriority="high" />
+    <div class="copy pad">
+      <h1 class="mega">{lines(tr(h, 'hero_title', lang)).map((l) => <span class="hl">{l} </span>)}</h1>
+      <div class="sub">
+        <p>{tr(h, 'hero_text', lang)}</p>
+        <svg class="datum" viewBox="0 0 420 30" aria-hidden="true"><line class="run" x1="1" y1="28" x2="392" y2="28" /><line class="rise" x1="392" y1="28" x2="418" y2="2" /></svg>
+      </div>
+    </div>
+  </div>
+
+  <section class="pad"><div class="statement">
+    <p class="label">{tr(h, 'statement_label', lang)}</p>
+    <div><h2 class="lg">{tr(h, 'statement_title', lang)}</h2><p class="body">{tr(h, 'statement_text', lang)}</p></div>
+  </div></section>
+
+  {featured.length > 0 && <>
+    <div class="pad" style="padding-bottom:28px"><p class="label">{tr(h, 'featured_label', lang)}</p></div>
+    {featured.map((p) => (
+      <a class="feature" href={href(lang, `/projects/${p.slug}/`)}>
+        <Pic src={p.cover} alt={tr(p, 'title', lang)} />
+        <div class="cap"><h3 class="xl">{tr(p, 'title', lang)}</h3><span>{tr(p, 'location', lang)}{lang === 'ar' ? '، ' : ', '}{num(p.year, lang)}</span></div>
+      </a>
+    ))}
+  </>}
+
+  <section class="pad">
+    <div class="statement"><p class="label">{tr(e, 'label', lang)}</p><h2 class="xl">{tr(e, 'title', lang)}</h2></div>
+    <div class="rows">{(e.items || []).map((i) => <div class="row"><h3>{tr(i, 'title', lang)}</h3><p>{tr(i, 'text', lang)}</p></div>)}</div>
+  </section>
+
+  <Cta lang={lang} />
+</Base>

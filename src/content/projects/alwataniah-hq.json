@@ -1,0 +1,19 @@
+{
+  "title_en": "Al-Wataniah Headquarters",
+  "title_ar": "مقر الشركة الوطنية",
+  "published": true,
+  "featured": false,
+  "order": 19,
+  "category": "civic",
+  "location_en": "Al-Nabek, Syria",
+  "location_ar": "النبك، سوريا",
+  "year": 2010,
+  "size_en": "2,500 m² plot",
+  "size_ar": "مساحة الأرض ٢٬٥٠٠ م²",
+  "scope_en": "Architectural design",
+  "scope_ar": "التصميم المعماري",
+  "description_en": "",
+  "description_ar": "",
+  "cover": "/src/assets/images/alwataniah-hq-1.jpg",
+  "gallery": []
+}
