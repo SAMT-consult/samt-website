@@ -1,0 +1,254 @@
+# Pages CMS — the editing panel for samtconsult.com
+# Open https://app.pagescms.org, sign in with GitHub, and choose this repository.
+
+media:
+  input: src/assets/images
+  output: /src/assets/images
+  rename: safe
+  categories: [image]
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "إضافة {path}"
+      update: "تعديل {path}"
+      delete: "حذف {path}"
+      rename: "إعادة تسمية {oldPath} إلى {newPath}"
+
+components:
+  pair_title_text:
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title_ar} — {title_en}"
+    fields:
+      - { name: title_en, label: "العنوان — English", type: string }
+      - { name: title_ar, label: "العنوان — عربي", type: string }
+      - { name: text_en, label: "النص — English", type: text }
+      - { name: text_ar, label: "النص — عربي", type: text }
+
+content:
+  # ───────────────────────── PROJECTS ─────────────────────────
+  - name: projects
+    label: "المشاريع — Projects"
+    type: collection
+    path: src/content/projects
+    format: json
+    filename:
+      template: "{title_en}.json"
+      field: create
+    view:
+      primary: title_en
+      fields: [title_en, title_ar, category, year, featured, published]
+      sort: [order, year, title_en]
+      search: [title_en, title_ar]
+      default: { sort: order, order: asc }
+    fields:
+      - { name: title_en, label: "اسم المشروع — English", type: string, required: true }
+      - { name: title_ar, label: "اسم المشروع — عربي", type: string }
+      - name: published
+        label: "منشور على الموقع"
+        description: "أوقف هذا الخيار لإخفاء المشروع دون حذفه."
+        type: boolean
+        default: true
+      - name: featured
+        label: "يظهر في الصفحة الرئيسية"
+        description: "يُعرض في قسم المشاريع المختارة بعرض الشاشة. يُنصح بأربعة مشاريع على الأكثر."
+        type: boolean
+        default: false
+      - name: order
+        label: "الترتيب"
+        description: "الرقم الأصغر يظهر أولاً."
+        type: number
+      - name: category
+        label: "التصنيف"
+        type: select
+        required: true
+        options:
+          values:
+            - { name: workplace, label: "مكاتب — Workplace" }
+            - { name: residential, label: "سكني — Residential" }
+            - { name: hospitality, label: "ضيافة — Hospitality" }
+            - { name: civic, label: "مدني ومتعدد الاستخدامات — Civic" }
+      - { name: location_en, label: "الموقع — English", type: string, description: "مثال: Riyadh, Saudi Arabia" }
+      - { name: location_ar, label: "الموقع — عربي", type: string, description: "مثال: الرياض، السعودية" }
+      - { name: year, label: "السنة", type: number }
+      - { name: size_en, label: "المساحة — English", type: string, description: "مثال: 1,050 m² plot" }
+      - { name: size_ar, label: "المساحة — عربي", type: string, description: "مثال: مساحة الأرض ١٬٠٥٠ م²" }
+      - { name: scope_en, label: "نطاق العمل — English", type: string }
+      - { name: scope_ar, label: "نطاق العمل — عربي", type: string }
+      - { name: description_en, label: "وصف المشروع — English (اختياري)", type: text }
+      - { name: description_ar, label: "وصف المشروع — عربي (اختياري)", type: text }
+      - name: cover
+        label: "الصورة الرئيسية"
+        description: "JPG بعرض ٢٠٠٠ بكسل تقريباً. يُحسَّن حجمها تلقائياً عند النشر."
+        type: image
+        required: true
+      - name: gallery
+        label: "صور إضافية"
+        description: "تظهر داخل صفحة المشروع بعد الصورة الرئيسية. يمكن إضافة أي عدد."
+        type: image
+        options:
+          multiple: { max: 40 }
+
+  # ───────────────────────── EXTRA PAGES / TABS ─────────────────────────
+  - name: pages
+    label: "صفحات إضافية — Extra pages"
+    type: collection
+    path: src/content/pages
+    format: json
+    exclude: [".gitkeep"]
+    filename:
+      template: "{title_en}.json"
+      field: create
+    view:
+      primary: title_en
+      fields: [title_en, title_ar, show_in_menu, published]
+      default: { sort: order, order: asc }
+    fields:
+      - { name: title_en, label: "عنوان الصفحة — English", type: string, required: true, description: "يُستخدم أيضاً في رابط الصفحة. لا تستخدم: projects, services, about, contact" }
+      - { name: title_ar, label: "عنوان الصفحة — عربي", type: string }
+      - { name: published, label: "منشورة على الموقع", type: boolean, default: true }
+      - { name: show_in_menu, label: "تظهر كتبويب في القائمة", type: boolean, default: true }
+      - { name: order, label: "الترتيب في القائمة", type: number }
+      - { name: cover, label: "صورة الغلاف (اختيارية)", type: image }
+      - { name: intro_en, label: "مقدمة قصيرة — English", type: text }
+      - { name: intro_ar, label: "مقدمة قصيرة — عربي", type: text }
+      - { name: body_en, label: "المحتوى — English", type: rich-text, options: { format: html } }
+      - { name: body_ar, label: "المحتوى — عربي", type: rich-text, options: { format: html } }
+      - name: gallery
+        label: "صور (اختيارية)"
+        type: image
+        options:
+          multiple: { max: 40 }
+
+  # ───────────────────────── SITE TEXT ─────────────────────────
+  - name: site
+    label: "نصوص الموقع — Site text"
+    type: file
+    path: src/content/site.json
+    format: json
+    operations: { delete: false }
+    fields:
+      - name: brand
+        label: "اسم الشركة ووصفها"
+        type: object
+        fields:
+          - { name: name_en, label: "الاسم — English", type: string }
+          - { name: name_ar, label: "الاسم — عربي", type: string }
+          - { name: description_en, label: "وصف محركات البحث — English", type: text }
+          - { name: description_ar, label: "وصف محركات البحث — عربي", type: text }
+      - name: menu
+        label: "أسماء التبويبات"
+        type: object
+        fields:
+          - { name: projects_en, label: "المشاريع — English", type: string }
+          - { name: projects_ar, label: "المشاريع — عربي", type: string }
+          - { name: services_en, label: "الخدمات — English", type: string }
+          - { name: services_ar, label: "الخدمات — عربي", type: string }
+          - { name: about_en, label: "من نحن — English", type: string }
+          - { name: about_ar, label: "من نحن — عربي", type: string }
+          - { name: contact_en, label: "تواصل — English", type: string }
+          - { name: contact_ar, label: "تواصل — عربي", type: string }
+      - name: home
+        label: "الصفحة الرئيسية"
+        type: object
+        fields:
+          - { name: hero_image, label: "الصورة الرئيسية للموقع", type: image, description: "يُفضَّل صورة فيها سماء واسعة في الأعلى، لأن العنوان يظهر فوقها." }
+          - { name: hero_title_en, label: "العنوان الكبير — English", type: text, description: "كل سطر يظهر في سطر مستقل." }
+          - { name: hero_title_ar, label: "العنوان الكبير — عربي", type: text, description: "كل سطر يظهر في سطر مستقل." }
+          - { name: hero_text_en, label: "السطر التعريفي — English", type: text }
+          - { name: hero_text_ar, label: "السطر التعريفي — عربي", type: text }
+          - { name: statement_label_en, label: "عنوان قسم النهج — English", type: string }
+          - { name: statement_label_ar, label: "عنوان قسم النهج — عربي", type: string }
+          - { name: statement_title_en, label: "عبارة النهج — English", type: text }
+          - { name: statement_title_ar, label: "عبارة النهج — عربي", type: text }
+          - { name: statement_text_en, label: "نص النهج — English", type: text }
+          - { name: statement_text_ar, label: "نص النهج — عربي", type: text }
+          - { name: featured_label_en, label: "عنوان المشاريع المختارة — English", type: string }
+          - { name: featured_label_ar, label: "عنوان المشاريع المختارة — عربي", type: string }
+      - name: engagement
+        label: "نماذج التعاون"
+        type: object
+        fields:
+          - { name: label_en, label: "العنوان الصغير — English", type: string }
+          - { name: label_ar, label: "العنوان الصغير — عربي", type: string }
+          - { name: title_en, label: "العنوان — English", type: string }
+          - { name: title_ar, label: "العنوان — عربي", type: string }
+          - { name: items, label: "النماذج", component: pair_title_text }
+      - name: cta
+        label: "دعوة التواصل أسفل الصفحات"
+        type: object
+        fields:
+          - { name: small_en, label: "السطر الصغير — English", type: string }
+          - { name: small_ar, label: "السطر الصغير — عربي", type: string }
+          - { name: big_en, label: "العبارة الكبيرة — English", type: string }
+          - { name: big_ar, label: "العبارة الكبيرة — عربي", type: string }
+      - name: projects_page
+        label: "صفحة المشاريع"
+        type: object
+        fields:
+          - { name: title_en, label: "العنوان — English", type: string }
+          - { name: title_ar, label: "العنوان — عربي", type: string }
+          - { name: note_en, label: "الملاحظة — English", type: text }
+          - { name: note_ar, label: "الملاحظة — عربي", type: text }
+      - name: services
+        label: "صفحة الخدمات"
+        type: object
+        fields:
+          - { name: title_en, label: "العنوان — English", type: string }
+          - { name: title_ar, label: "العنوان — عربي", type: string }
+          - { name: intro_en, label: "المقدمة — English", type: text }
+          - { name: intro_ar, label: "المقدمة — عربي", type: text }
+          - { name: items, label: "الخدمات", component: pair_title_text }
+          - { name: process_label_en, label: "عنوان المنهجية الصغير — English", type: string }
+          - { name: process_label_ar, label: "عنوان المنهجية الصغير — عربي", type: string }
+          - { name: process_title_en, label: "عنوان المراحل — English", type: string }
+          - { name: process_title_ar, label: "عنوان المراحل — عربي", type: string }
+          - { name: steps, label: "مراحل العمل", component: pair_title_text }
+      - name: about
+        label: "صفحة من نحن"
+        type: object
+        fields:
+          - { name: title_en, label: "العنوان — English", type: string }
+          - { name: title_ar, label: "العنوان — عربي", type: string }
+          - { name: intro_en, label: "التعريف — English", type: text }
+          - { name: intro_ar, label: "التعريف — عربي", type: text }
+          - { name: name_label_en, label: "عنوان معنى الاسم — English", type: string }
+          - { name: name_label_ar, label: "عنوان معنى الاسم — عربي", type: string }
+          - { name: name_text_en, label: "معنى الاسم — English", type: text }
+          - { name: name_text_ar, label: "معنى الاسم — عربي", type: text }
+          - { name: principles_label_en, label: "عنوان المبادئ — English", type: string }
+          - { name: principles_label_ar, label: "عنوان المبادئ — عربي", type: string }
+          - { name: principles, label: "المبادئ", component: pair_title_text }
+          - { name: leadership_label_en, label: "عنوان القيادة — English", type: string }
+          - { name: leadership_label_ar, label: "عنوان القيادة — عربي", type: string }
+          - { name: person_en, label: "الاسم — English", type: string }
+          - { name: person_ar, label: "الاسم — عربي", type: string }
+          - { name: role_en, label: "المنصب — English", type: string }
+          - { name: role_ar, label: "المنصب — عربي", type: string }
+          - { name: portrait, label: "الصورة الشخصية", type: image }
+          - { name: bio_en, label: "السيرة — English", type: text, description: "اترك سطراً فارغاً بين الفقرات." }
+          - { name: bio_ar, label: "السيرة — عربي", type: text, description: "اترك سطراً فارغاً بين الفقرات." }
+      - name: contact
+        label: "بيانات التواصل"
+        type: object
+        fields:
+          - { name: label_en, label: "العنوان — English", type: string }
+          - { name: label_ar, label: "العنوان — عربي", type: string }
+          - { name: intro_en, label: "المقدمة — English", type: text }
+          - { name: intro_ar, label: "المقدمة — عربي", type: text }
+          - { name: email, label: "البريد العام", type: string }
+          - { name: email_direct, label: "البريد المباشر", type: string }
+          - { name: phone, label: "رقم الهاتف", type: string, description: "بالصيغة الدولية: +963 957 530 828" }
+          - { name: whatsapp, label: "رقم واتساب", type: string, description: "أرقام فقط بلا + ولا مسافات: 963957530828 — اتركه فارغاً لإخفاء واتساب." }
+          - { name: linkedin, label: "رابط لينكدإن", type: string }
+          - { name: base_en, label: "المقر — English", type: string }
+          - { name: base_ar, label: "المقر — عربي", type: string }
+          - name: form_key
+            label: "مفتاح نموذج التواصل (Web3Forms)"
+            description: "اختياري. عند إضافته تُرسَل رسائل النموذج مباشرة إلى بريدكم. بدونه يفتح النموذج تطبيق البريد عند الزائر."
+            type: string
