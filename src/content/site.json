@@ -191,7 +191,7 @@
     "person_ar": "أحمد حموش، PMP",
     "role_en": "Founder and Managing Director",
     "role_ar": "المؤسس والمدير العام",
-    "portrait": "/src/assets/images/portrait-ahmad-hamouch.jpg",
+    "portrait": "/src/assets/images/ahmad-pic.jpg",
     "bio_en": "An architect who graduated from Damascus University in 2005, with twenty years as designer, site engineer, project manager and consultant on educational, commercial, healthcare and government projects.\n\nHe established his own design practice in 2008, worked as project manager and consultant with NGC Group in Erbil, and led a project management division at a Riyadh consultancy.\n\nCertified Project Management Professional (PMP).",
     "bio_ar": "مهندس معماري تخرّج في جامعة دمشق عام ٢٠٠٥، ويمتد مساره المهني عشرين عاماً بين التصميم والإشراف الميداني وإدارة المشاريع والاستشارات، في مشاريع تعليمية وتجارية وصحية وحكومية.\n\nأسّس مكتبه الخاص للتصميم عام ٢٠٠٨، وعمل مديراً للمشاريع ومستشاراً لدى مجموعة NGC في أربيل، ثم تولّى إدارة قسم المشاريع في مكتب استشاري بالرياض.\n\nحاصل على شهادة محترف إدارة المشاريع (PMP)."
   },
@@ -203,10 +203,9 @@
     "email": "info@samtconsult.com",
     "email_direct": "a.hamouch@samtconsult.com",
     "phone": "+963 957 530 828",
-    "whatsapp": "963957530828",
+    "whatsapp": "966583309315",
     "linkedin": "https://www.linkedin.com/company/samt-consult",
     "base_en": "Damascus, Syria. Working across Saudi Arabia and the Gulf.",
-    "base_ar": "دمشق، سوريا، ونخدم عملاءنا في المملكة العربية السعودية ودول الخليج.",
-    "form_key": ""
+    "base_ar": "دمشق، سوريا، ونخدم عملاءنا في المملكة العربية السعودية ودول الخليج."
   }
 }
