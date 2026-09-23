@@ -18,11 +18,13 @@ const a = site.about || {};
   </section>}
   <section class="pad" style="padding-top:0">
     <div class="statement"><p class="label">{tr(a, 'leadership_label', lang)}</p><span></span></div>
-    <div class="person">
-      <Pic src={a.portrait} alt={tr(a, 'person', lang)} widths={[400, 800]} sizes="(max-width:860px) 320px, 460px" />
-      <div><h2 class="xl">{tr(a, 'person', lang)}</h2><p class="role">{tr(a, 'role', lang)}</p>
-        {paras(tr(a, 'bio', lang)).map((x) => <p class="body">{x}</p>)}</div>
-    </div>
+        {(a.people || []).map((p) => (
+      <div class="person">
+        <Pic src={p.portrait} alt={tr(p, 'person', lang)} widths={[400, 800]} sizes="(max-width:860px) 320px, 460px" />
+        <div><h2 class="xl">{tr(p, 'person', lang)}</h2><p class="role">{tr(p, 'role', lang)}</p>
+          {paras(tr(p, 'bio', lang)).map((x) => <p class="body">{x}</p>)}</div>
+      </div>
+    ))}
   </section>
   <Cta lang={lang} />
 </Base>
