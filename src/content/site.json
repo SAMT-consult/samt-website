@@ -1,9 +1,9 @@
 {
   "brand": {
-    "name_en": "SAMT Consult",
+    "name_en": "Samt Consult",
     "name_ar": "سَمْت للاستشارات الهندسية",
-    "description_en": "Engineering design and project management for engineering offices and developers in Saudi Arabia and the Gulf.",
-    "description_ar": "استشارات هندسية وإدارة مشاريع للمكاتب الاستشارية والمطوّرين العقاريين في المملكة العربية السعودية ودول الخليج."
+    "description_en": "Engineering design and project management for engineering offices and developers in Saudi Arabia and the Gulf",
+    "description_ar": "استشارات هندسية وإدارة مشاريع للمكاتب الاستشارية والمطوّرين العقاريين في المملكة العربية السعودية ودول الخليج"
   },
   "menu": {
     "projects_en": "Projects",
@@ -24,9 +24,9 @@
     "statement_label_en": "Practice",
     "statement_label_ar": "نهجنا",
     "statement_title_en": "We take the whole package, coordinate it across disciplines, and stay with the project until it is built.",
-    "statement_title_ar": "نتولّى أعمال التصميم كاملةً، وننسّق بين تخصصاتها، ونلازم المشروع حتى يكتمل تنفيذه.",
-    "statement_text_en": "Most delays start with an incomplete drawing set or a missed code check. We work so that what reaches you is complete and ready for authority review. Our team brings over two decades of experience across Saudi Arabia, Syria, Qatar and Iraq.",
-    "statement_text_ar": "تبدأ معظم حالات التأخير في المشاريع من مخططات غير مكتملة أو متطلبات نظامية أُغفلت في مرحلة مبكرة. لذلك نحرص على أن تصلكم الأعمال مكتملةً ومستوفيةً لاشتراطات الجهات المختصة. ويستند فريقنا إلى خبرة تتجاوز عشرين عاماً في المملكة العربية السعودية وسوريا وقطر والعراق.",
+    "statement_title_ar": "نتولّى أعمال التصميم كاملةً، وننسّق بين تخصصاتها، ونلازم المشروع حتى يكتمل تنفيذه",
+    "statement_text_en": "Most project delays begin with incomplete drawings or overlooked code requirements. We review every submission for completeness and compliance before it reaches you, so it is ready for review by the relevant authorities. Our team brings more than two decades of experience across Saudi Arabia, and Syria.",
+    "statement_text_ar": "كثير من تأخيرات المشاريع تبدأ بمخططات غير مكتملة أو باشتراطات تنظيمية لم تُراجع كما ينبغي. لذلك نحرص على تدقيق كل حزمة قبل تسليمها، لتصلكم مستوفيةً وجاهزةً للمراجعة لدى الجهات المختصة. ويستند فريقنا إلى خبرة تمتد لأكثر من عشرين عاماً في مشاريع بالمملكة العربية السعودية وسوريا .",
     "featured_label_en": "Selected work",
     "featured_label_ar": "مشاريع مختارة"
   },
