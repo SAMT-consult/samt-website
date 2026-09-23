@@ -1,6 +1,6 @@
 {
   "title_en": "ALINCO Head Office",
-  "title_ar": "المقر الرئيسي لشركة ألينكو",
+  "title_ar": "المقر الرئيسي لشركة ألنكو",
   "published": true,
   "featured": true,
   "order": 1,
@@ -12,8 +12,5 @@
   "size_ar": "مساحة الأرض ١٬٠٥٠ م²",
   "scope_en": "Exterior and interior design, project management",
   "scope_ar": "تصميم الواجهات والتصميم الداخلي، وإدارة المشروع",
-  "description_en": "",
-  "description_ar": "",
-  "cover": "/src/assets/images/alinco-1.jpg",
-  "gallery": []
+  "cover": "/src/assets/images/alinco-1.jpg"
 }
