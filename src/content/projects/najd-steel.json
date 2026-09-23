@@ -1,6 +1,6 @@
 {
-  "title_en": "NAJD STEEL Offices",
-  "title_ar": "مكاتب NAJD STEEL",
+  "title_en": "NAJD STEEL H.Q",
+  "title_ar": "مكاتب حديد نجد",
   "published": true,
   "featured": true,
   "order": 2,
@@ -12,8 +12,6 @@
   "size_ar": "٨٠٠ م²",
   "scope_en": "Interior design, project management",
   "scope_ar": "التصميم الداخلي وإدارة المشروع",
-  "description_en": "",
-  "description_ar": "",
   "cover": "/src/assets/images/najd-steel-1.jpg",
   "gallery": [
     "/src/assets/images/najd-steel-2.jpg",
