@@ -161,8 +161,8 @@
     "intro_ar": "تقدّم سَمْت للاستشارات خدمات التصميم الهندسي وإدارة المشاريع. نساند المكاتب الهندسية التي تحتاج إلى دعم موثوق في أعمال التصميم، ونرافق المطوّرين والمُلّاك في إدارة مشاريعهم من مرحلة التصميم حتى التسليم.",
     "name_label_en": "The name",
     "name_label_ar": "معنى الاسم",
-    "name_text_en": "Samt is the Arabic word for a bearing — a direction measured, not guessed. The English word azimuth comes from it. It also means composure: a steady way of carrying yourself. Both describe how we work.",
-    "name_text_ar": "السَّمْت في لغة المساحة والفلك زاويةُ الاتجاه: وجهةٌ تُقاس ولا تُقدَّر، ومنه اشتُقّ المصطلح الإنكليزي azimuth. والسَّمْت في اللغة أيضاً حُسنُ الهيئة والوقار. وفي المعنيين وصفٌ لطريقتنا في العمل.",
+    "name_text_en": "Samt is an Arabic word for direction or bearing, a course chosen with purpose. Its plural, as-sumūt, gave English the word azimuth. The word also evokes composure and poise: a steady way of carrying oneself. Together, these meanings express how we work: with clear direction and a steady hand.",
+    "name_text_ar": "سَمْت كلمة عربية تجمع بين معنى الاتجاه ومعنى الوقار التي تُستخدم للدلالة على اتجاه يُحدَّد بالقياس. والسَّمت أيضاً حُسن الهيئة واتزان التصرف. اخترنا الاسم لأنه يعبّر عن طريقتنا في العمل: نعرف وجهتنا، ونسير إليها برويّة وثبات",
     "principles_label_en": "Principles",
     "principles_label_ar": "مبادئ العمل",
     "principles": [
@@ -192,8 +192,8 @@
     "role_en": "Founder and Managing Director",
     "role_ar": "المؤسس والمدير العام",
     "portrait": "/src/assets/images/ahmad-pic.jpg",
-    "bio_en": "An architect who graduated from Damascus University in 2005, with twenty years as designer, site engineer, project manager and consultant on educational, commercial, healthcare and government projects.\n\nHe established his own design practice in 2008, worked as project manager and consultant with NGC Group in Erbil, and led a project management division at a Riyadh consultancy.\n\nCertified Project Management Professional (PMP).",
-    "bio_ar": "مهندس معماري تخرّج في جامعة دمشق عام ٢٠٠٥، ويمتد مساره المهني عشرين عاماً بين التصميم والإشراف الميداني وإدارة المشاريع والاستشارات، في مشاريع تعليمية وتجارية وصحية وحكومية.\n\nأسّس مكتبه الخاص للتصميم عام ٢٠٠٨، وعمل مديراً للمشاريع ومستشاراً لدى مجموعة NGC في أربيل، ثم تولّى إدارة قسم المشاريع في مكتب استشاري بالرياض.\n\nمحترف إدارة المشاريع (PMP)."
+    "bio_en": "A graduate of Damascus University’s Faculty of Architecture in 2005, he has more than 20 years of experience in design, site engineering, project management, and consultancy across educational, commercial, healthcare, and government projects.\nHe established his own design practice in 2008, later worked as a project manager and consultant with NGC Group in Erbil, and led the project management division of a consultancy in Riyadh.\nHe is a certified Project Management Professional (PMP®).",
+    "bio_ar": "تخرّج في كلية الهندسة المعمارية بجامعة دمشق عام 2005، ويمتلك خبرة تزيد على عشرين عاماً في التصميم الهندسي والإشراف الميداني وإدارة المشاريع والاستشارات، عمل خلالها على مشاريع تعليمية وتجارية وصحية وحكومية.\nأسّس مكتبه الخاص للتصميم عام 2008، ثم عمل مديراً للمشاريع ومستشاراً لدى مجموعة  في أربيل، وتولّى لاحقاً قيادة قسم إدارة المشاريع في مكتب استشاري بالرياض.\nوهو محترف إدارة المشاريع (PMP®)."
   },
   "contact": {
     "label_en": "Contact",
