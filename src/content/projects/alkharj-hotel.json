@@ -1,6 +1,6 @@
 {
-  "title_en": "Al-Kharj Hotel",
-  "title_ar": "فندق الخرج",
+  "title_en": "Three star serviced apartment ",
+  "title_ar": "شقق مخدومة ثري ستار",
   "published": true,
   "featured": true,
   "order": 13,
@@ -8,12 +8,9 @@
   "location_en": "Al-Kharj, Saudi Arabia",
   "location_ar": "الخرج، السعودية",
   "year": 2016,
-  "size_en": "6,000 m² gross",
-  "size_ar": "مساحة البناء ٦٬٠٠٠ م²",
+  "size_en": "3,000 m² gross",
+  "size_ar": "مساحة البناء 3٬٠٠٠ م²",
   "scope_en": "Architectural design",
   "scope_ar": "التصميم المعماري",
-  "description_en": "",
-  "description_ar": "",
-  "cover": "/src/assets/images/alkharj-hotel-1.jpg",
-  "gallery": []
+  "cover": "/src/assets/images/alkharj-hotel-1.jpg"
 }
