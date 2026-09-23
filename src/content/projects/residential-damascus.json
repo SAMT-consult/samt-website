@@ -1,6 +1,6 @@
 {
-  "title_en": "Residential Building",
-  "title_ar": "مبنى سكني",
+  "title_en": "Residential Building 3282",
+  "title_ar": "مبنى سكني 3282",
   "published": true,
   "featured": false,
   "order": 7,
@@ -12,8 +12,5 @@
   "size_ar": "مساحة البناء ٢٬٠٠٠ م²",
   "scope_en": "Architectural design",
   "scope_ar": "التصميم المعماري",
-  "description_en": "",
-  "description_ar": "",
-  "cover": "/src/assets/images/residential-damascus-1.jpg",
-  "gallery": []
+  "cover": "/src/assets/images/residential-damascus-1.jpg"
 }
