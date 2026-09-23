@@ -226,14 +226,18 @@ content:
           - { name: principles, label: "المبادئ", component: pair_title_text }
           - { name: leadership_label_en, label: "عنوان القيادة — English", type: string }
           - { name: leadership_label_ar, label: "عنوان القيادة — عربي", type: string }
-          - { name: person_en, label: "الاسم — English", type: string }
-          - { name: person_ar, label: "الاسم — عربي", type: string }
-          - { name: role_en, label: "المنصب — English", type: string }
-          - { name: role_ar, label: "المنصب — عربي", type: string }
-          - { name: portrait, label: "الصورة الشخصية", type: image }
-          - { name: bio_en, label: "السيرة — English", type: text, description: "اترك سطراً فارغاً بين الفقرات." }
-          - { name: bio_ar, label: "السيرة — عربي", type: text, description: "اترك سطراً فارغاً بين الفقرات." }
-      - name: contact
+          - name: people
+            label: "أعضاء القيادة"
+            type: object
+            list: true
+            fields:
+              - { name: person_en, label: "الاسم — English", type: string }
+              - { name: person_ar, label: "الاسم — عربي", type: string }
+              - { name: role_en, label: "المنصب — English", type: string }
+              - { name: role_ar, label: "المنصب — عربي", type: string }
+              - { name: portrait, label: "الصورة الشخصية", type: image }
+              - { name: bio_en, label: "السيرة — English", type: text, description: "اترك سطراً فارغاً بين الفقرات." }
+              - { name: bio_ar, label: "السيرة — عربي", type: text, description: "اترك سطراً فارغاً بين الفقرات." }      - name: contact
         label: "بيانات التواصل"
         type: object
         fields:
