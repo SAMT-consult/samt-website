@@ -1,6 +1,6 @@
 {
-  "title_en": "Private Villa Interiors",
-  "title_ar": "التصميم الداخلي لفيلا خاصة",
+  "title_en": "Private Villa 8552",
+  "title_ar": "فيلا خاصة 8552",
   "published": true,
   "featured": false,
   "order": 10,
@@ -12,8 +12,5 @@
   "size_ar": "١٬٠٠٠ م²",
   "scope_en": "Interior design",
   "scope_ar": "التصميم الداخلي",
-  "description_en": "",
-  "description_ar": "",
-  "cover": "/src/assets/images/villa-interiors-2022-1.jpg",
-  "gallery": []
+  "cover": "/src/assets/images/villa-interiors-2022-1.jpg"
 }
