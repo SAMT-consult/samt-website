@@ -187,18 +187,18 @@
     ],
     "leadership_label_en": "Leadership",
     "leadership_label_ar": "القيادة",
-    "people": [
-      {
-        "person_en": "Ahmad Hamouch, PMP",
-        "person_ar": "أحمد حموش، PMP",
-        "role_en": "Founder and Managing Director",
-        "role_ar": "المؤسس والمدير العام",
-        "portrait": "/src/assets/images/my-pic-1.png",
-        "bio_en": "A graduate of Damascus University's Faculty of Architecture in 2005, he has more than 20 years of experience in design, site engineering, project management, and consultancy across educational, commercial, healthcare, and government projects.\n\nHe established his own design practice in 2008, later worked as a project manager and consultant with NGC Group in Erbil, and led the project management division of a consultancy in Riyadh.\n\nHe is a certified Project Management Professional (PMP®).",
-        "bio_ar": "تخرّج في كلية الهندسة المعمارية بجامعة دمشق عام 2005، ويمتلك خبرة تزيد على عشرين عاماً في التصميم الهندسي والإشراف الميداني وإدارة المشاريع والاستشارات، عمل خلالها على مشاريع تعليمية وتجارية وصحية وحكومية.\n\nأسّس مكتبه الخاص للتصميم عام 2008، ثم عمل مديراً للمشاريع ومستشاراً لدى مجموعة في أربيل، وتولّى لاحقاً قيادة قسم إدارة المشاريع في مكتب استشاري بالرياض.\n\nوهو محترف إدارة المشاريع (PMP®)."
-      }
-    ]
-      },
+    "people":[
+    {
+    "person_en": "Ahmad Hamouch, PMP",
+    "person_ar": "أحمد حموش، PMP",
+    "role_en": "Founder and Managing Director",
+    "role_ar": "المؤسس والمدير العام",
+    "portrait": "/src/assets/images/my-pic-1.png",
+    "bio_en": "A graduate of Damascus University's Faculty of Architecture in 2005, he has more than 20 years of experience in design, site engineering, project management, and consultancy across educational, commercial, healthcare, and government projects.\n\nHe established his own design practice in 2008, later worked as a project manager and consultant with NGC Group in Erbil, and led the project management division of a consultancy in Riyadh.\n\nHe is a certified Project Management Professional (PMP®).",
+    "bio_ar": "تخرّج في كلية الهندسة المعمارية بجامعة دمشق عام 2005، ويمتلك خبرة تزيد على عشرين عاماً في التصميم الهندسي والإشراف الميداني وإدارة المشاريع والاستشارات، عمل خلالها على مشاريع تعليمية وتجارية وصحية وحكومية.\n\nأسّس مكتبه الخاص للتصميم عام 2008، ثم عمل مديراً للمشاريع ومستشاراً لدى مجموعة في أربيل، وتولّى لاحقاً قيادة قسم إدارة المشاريع في مكتب استشاري بالرياض.\n\nوهو محترف إدارة المشاريع (PMP®)."
+    }
+            ]
+    },
   "contact": {
     "label_en": "Contact",
     "label_ar": "تواصل معنا",
