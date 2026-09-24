@@ -236,8 +236,8 @@ content:
               - { name: role_en, label: "المنصب — English", type: string }
               - { name: role_ar, label: "المنصب — عربي", type: string }
               - { name: portrait, label: "الصورة الشخصية", type: image }
-              - { name: bio_en, label: "السيرة — English", type: text, description: "اترك سطراً فارغاً بين الفقرات." }
-              - { name: bio_ar, label: "السيرة — عربي", type: text, description: "اترك سطراً فارغاً بين الفقرات." }      
+              - { name: bio_en, label: "السيرة — English", type: text }
+              - { name: bio_ar, label: "السيرة — عربي", type: text }        
         - name: contact
         label: "بيانات التواصل"
         type: object
