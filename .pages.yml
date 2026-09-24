@@ -226,7 +226,7 @@ content:
           - { name: principles, label: "المبادئ", component: pair_title_text }
           - { name: leadership_label_en, label: "عنوان القيادة — English", type: string }
           - { name: leadership_label_ar, label: "عنوان القيادة — عربي", type: string }
-          - name: people
+        - name: people
             label: "أعضاء القيادة"
             type: object
             list: true
